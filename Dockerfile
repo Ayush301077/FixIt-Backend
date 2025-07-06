@@ -7,5 +7,6 @@ COPY . /app
 RUN chmod +x ./mvnw
 RUN ./mvnw clean package -DskipTests
 
-EXPOSE $PORT
+EXPOSE 8080
+
 CMD ["sh", "-c", "java -jar target/FixIt-Backend-0.0.1-SNAPSHOT.jar --server.port=$PORT"]
