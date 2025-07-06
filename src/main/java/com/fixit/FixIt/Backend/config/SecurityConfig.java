@@ -54,6 +54,7 @@ public class SecurityConfig {
                 .requestMatchers("/error").permitAll()
                 .requestMatchers("/images/**").permitAll()
                 .requestMatchers("/api/service-requests/healthz").permitAll()
+                    .requestMatchers("/healthz").permitAll()
                 .requestMatchers(HttpMethod.PATCH, "/api/service-requests/**").authenticated()
                 .anyRequest().authenticated()
             )
