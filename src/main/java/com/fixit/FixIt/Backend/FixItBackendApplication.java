@@ -8,7 +8,6 @@ public class FixItBackendApplication {
 
 	public static void main(String[] args) {
 		System.out.println("PORT ENV: " + System.getenv("PORT"));
-
 		SpringApplication.run(FixItBackendApplication.class, args);
 	}
 
