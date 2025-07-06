@@ -100,4 +100,9 @@ public class ServiceRequestController {
             @RequestParam ServiceStatus status) {
         return ResponseEntity.ok(serviceRequestService.updateServiceRequestStatus(id, status));
     }
+
+    @GetMapping("/healthz")
+    public String healthz() {
+        return "OK";
+    }
 } 
